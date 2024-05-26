@@ -20,7 +20,7 @@ public class Main {
             // Lectura del archivo que contiene las conexiones entre ciudades y sus
             // distancias
             BufferedReader br = new BufferedReader(
-                    new FileReader("src\\main\\java\\uvg\\edu\\gt\\guategrafo.txt"));
+                    new FileReader("guategrafo.txt"));
             String line;
             while ((line = br.readLine()) != null) {
                 // Se divide la línea en partes: ciudad_origen ciudad_destino distancia
