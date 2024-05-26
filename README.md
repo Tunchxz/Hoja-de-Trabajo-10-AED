@@ -18,7 +18,6 @@ Guatemala, 26 de mayo de 2024
 
 [Repositorio Hoja-De-Trabajo-10-AED](https://github.com/Tunchxz/Hoja-de-Trabajo-10-AED.git "Enlace a GitHub")
 
-## Documentación Adicional
+## Diagrama UML de Clases
 
 ![Untitled_page-0001](https://github.com/Tunchxz/Hoja-de-Trabajo-10-AED/assets/132542854/6af70900-4b1f-4f97-bca6-8550a119aca7)
-

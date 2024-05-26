@@ -5,9 +5,16 @@ import org.junit.Test;
 import java.util.List;
 import static org.junit.Assert.*;
 
+/**
+ * Pruebas unitarias para la clase Grafo.
+ */
 public class GrafoTest {
     private Grafo grafo;
 
+    /**
+     * Configuración inicial para las pruebas.
+     * Se crea un grafo con 6 ciudades y se agregan conexiones entre ellas.
+     */
     @Before
     public void setUp() {
         grafo = new Grafo(6);
@@ -16,9 +23,12 @@ public class GrafoTest {
         grafo.addEdge("CiudadC", "CiudadD", 15);
         grafo.addEdge("CiudadD", "CiudadE", 30);
         grafo.addEdge("CiudadE", "CiudadA", 40);
-        grafo.floydWarshall();
+        grafo.floydWarshall(); // Se ejecuta el algoritmo de Floyd-Warshall para preparar el grafo
     }
 
+    /**
+     * Prueba unitaria para verificar la indexación de ciudades en el grafo.
+     */
     @Test
     public void testAddEdgeAndCities() {
         assertEquals(0, grafo.getCityIndex("CiudadA"));
@@ -28,6 +38,9 @@ public class GrafoTest {
         assertEquals(4, grafo.getCityIndex("CiudadE"));
     }
 
+    /**
+     * Prueba unitaria para verificar los caminos más cortos entre ciudades.
+     */
     @Test
     public void testShortestPath() {
         List<String> path = grafo.getPath("CiudadA", "CiudadC");
@@ -45,12 +58,18 @@ public class GrafoTest {
         assertEquals(75, grafo.getDistance("CiudadA", "CiudadE"));
     }
 
+    /**
+     * Prueba unitaria para verificar el cálculo del centro del grafo.
+     */
     @Test
     public void testGetCenter() {
         String center = grafo.getCenter();
         assertEquals("CiudadA", center);
     }
 
+    /**
+     * Prueba unitaria para verificar el manejo de ciudades sin conexión directa.
+     */
     @Test
     public void testNoPath() {
         grafo.addEdge("CiudadE", "CiudadF", Integer.MAX_VALUE / 2);
